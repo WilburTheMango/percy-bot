@@ -45,14 +45,17 @@ public class Main  {
                 .stream()
                 .map(BaseCommand::build)
                 .toList();
-        
-        for (String guildId : BotConfig.TARGETED_GUILDS) {
-        	System.out.println(guildId);
-	        jda.getGuildById(guildId).updateCommands()
-	                .addCommands(data)
-	                .queue();
+        if (BotConfig.TARGETED_GUILDS != null) {
+	        for (String guildId : BotConfig.TARGETED_GUILDS) {
+	        	System.out.println(guildId);
+		        jda.getGuildById(guildId).updateCommands()
+		                .addCommands(data)
+		                .queue();
+	        }
+        } else {
+        	System.out.println("No guilds were targeted. Updating commands globally.");
+        	jda.updateCommands().addCommands(data).queue(); // if no guilds targeted.
         }
-        jda.updateCommands().queue(); // Not currently using global slash commands, therefore clear. Global
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             jda.shutdown();
         }));

@@ -4,11 +4,11 @@ This bot is meant for personal use among friends. It has/will have features whic
 
 ## Installation:
 Currently no releases are provided. Therefore you will need to compile it yourself.
-Maven is the ideal way to handle it and what JDA wants. 
+Maven is the ideal way to handle it and what JDA wants. Java 17 is the normal target but anything later *should* work. (not tested.)
 You can also try importing the project into eclipse with the provided .classpath I left in there for myself.
-After you have your jarfile make sure you have a data folder with the jarfile, and a config.env file containing the needed tokens. 
-Currently you only need a discord bot token. However soon a spotify and youtube token will be required for music features.
-The bot only works if you have it in less than 100 guilds. Ideally you should only run it in a couple guilds.
+1. After you have your jarfile make sure you have a data folder with the jarfile, and a config.env file containing the needed tokens. 
+2. Currently you only need a discord bot token. However soon a spotify and youtube token will be required for music features.
+3. The bot only works if you have it in less than 100 guilds. Ideally you should only run it in a couple guilds.
 
 ## Feature Roadmap
 - Nicknaming users.

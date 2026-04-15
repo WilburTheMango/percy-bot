@@ -52,7 +52,7 @@ public class Main  {
 	                .addCommands(data)
 	                .queue();
         }
-        jda.updateCommands().queue(); // Not currently using global slash commands, therefore clear. Global
+        jda.updateCommands().queue(); // Not currently using global slash commands, therefore clear. Global commands take a while to update.
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             jda.shutdown();
         }));

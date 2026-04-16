@@ -9,6 +9,7 @@ You can also try importing the project into eclipse with the provided .classpath
 1. After you have your jarfile make sure you have a data folder with the jarfile, and a config.env file containing the needed tokens. 
 2. Currently you only need a discord bot token. However soon a spotify and youtube token will be required for music features.
 3. The bot only works if you have it in less than 100 guilds. Ideally you should only run it in a couple guilds.
+4. Experimental Music Playback: Lavalink.jar and the youtube plugin are currently bundled. Manual install will likely be required in the future.
 
 ## Feature Roadmap
 - Nicknaming users.

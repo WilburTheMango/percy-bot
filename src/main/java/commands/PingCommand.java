@@ -2,7 +2,8 @@ package commands;
 
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.interactions.commands.build.SlashCommandData;
-import net.dv8tion.jda.api.interactions.commands.SlashCommandInteraction;
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import playback.PlaybackLavalink;
 
 public class PingCommand extends BaseCommand {
 
@@ -13,7 +14,7 @@ public class PingCommand extends BaseCommand {
 
     @Override
     public String description() {
-        return "Check if the Bot is recieving commands from the API with a ping!";
+        return "Check bot responsiveness";
     }
 
     @Override
@@ -22,7 +23,7 @@ public class PingCommand extends BaseCommand {
     }
 
     @Override
-    public void execute(SlashCommandInteraction event) {
+    public void execute(SlashCommandInteractionEvent event, PlaybackLavalink lavalink) {
         event.reply("pong").setEphemeral(true).queue();
     }
 }

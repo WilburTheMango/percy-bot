@@ -2,13 +2,16 @@ package core;
 import commands.BaseCommand;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import playback.PlaybackLavalink;
 
 public class SlashListener extends ListenerAdapter {
 
     private final CommandRegistry registry;
-
-    public SlashListener(CommandRegistry registry) {
+    private final PlaybackLavalink lavalink;
+    
+    public SlashListener(CommandRegistry registry, PlaybackLavalink lavalink) {
         this.registry = registry;
+        this.lavalink = lavalink;
     }
 
     @Override
@@ -21,6 +24,6 @@ public class SlashListener extends ListenerAdapter {
             return;
         }
 
-        cmd.execute(event);
+        cmd.execute(event, lavalink);
     }
 }

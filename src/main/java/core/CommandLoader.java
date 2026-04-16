@@ -8,7 +8,8 @@ public class CommandLoader {
     public static void load(CommandRegistry registry) {
 
         Set<Class<?>> classes = Set.of( //Currently, all commands must be registered here.
-        		PingCommand.class
+        		PingCommand.class,
+        		PlayCommand.class
         );
 
         for (Class<?> clazz : classes) {

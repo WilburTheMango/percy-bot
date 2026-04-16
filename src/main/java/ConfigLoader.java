@@ -54,6 +54,7 @@ public class ConfigLoader {
         switch (key) {
 
             case "DISCORD_TOKEN" -> BotConfig.DISCORD_TOKEN = value;
+            case "BOT_USER_ID" -> BotConfig.BOT_USER_ID = value;
             case "DATA_DIR" -> BotConfig.DATA_DIR = value;
 
             case "YOUTUBE_API_KEY" -> BotConfig.YOUTUBE_API_KEY = value;

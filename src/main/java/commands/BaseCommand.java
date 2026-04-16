@@ -1,7 +1,8 @@
 package commands;
 
-import net.dv8tion.jda.api.interactions.commands.SlashCommandInteraction;
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.interactions.commands.build.SlashCommandData;
+import playback.PlaybackLavalink;
 
 public abstract class BaseCommand {
 
@@ -12,5 +13,6 @@ public abstract class BaseCommand {
     public abstract SlashCommandData build();
 
     // execution logic
-    public abstract void execute(SlashCommandInteraction event);
+    public abstract void execute(SlashCommandInteractionEvent event, PlaybackLavalink lavalink);
+    
 }

@@ -2,6 +2,7 @@
 public class BotConfig {
 
     public static String DISCORD_TOKEN;
+    public static String BOT_USER_ID;
     public static String DATA_DIR;
     public static String YOUTUBE_API_KEY;
     public static String SPOTIFY_CLIENT_ID;

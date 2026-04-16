@@ -1,25 +1,42 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.percybot.discordbot</groupId>
-  <artifactId>percy-bot</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-    </properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.percybot.discordbot</groupId>
+	<artifactId>percy-bot</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-    <dependencies>
-        <dependency>
-            <groupId>net.dv8tion</groupId>
-            <artifactId>JDA</artifactId>
-            <version>6.4.1</version> 
-        </dependency>
-    
-	    <dependency>
-	    	<groupId>ch.qos.logback</groupId>
-		    <artifactId>logback-classic</artifactId>
-	    	<version>1.5.6</version>
-	    </dependency> 	
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>ll-releases</id>
+			<name>Lavalink Releases</name>
+			<url>https://maven.lavalink.dev/releases</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.dv8tion</groupId>
+			<artifactId>JDA</artifactId>
+			<version>6.4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.5.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dev.arbjerg</groupId>
+			<artifactId>lavalink-client</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+
 	</dependencies>
 </project>

@@ -1,0 +1,20 @@
+server:
+  port: 2333
+
+lavalink:
+  server:
+    password: "youshallnotpass"
+    sources:
+      youtube: false
+
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.0"
+
+plugins:
+  youtube:
+    enabled: true
+    allowSearch: true
+    clients:
+      - WEB
+      - WEBEMBEDDED
+      - ANDROID_VR
